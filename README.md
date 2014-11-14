@@ -1,13 +1,21 @@
 rgraphicsgallery
 ================
 
-This is a complete redesign of the R Graphics Gallery. 
+A directory of R graphics and their source code.
 
-- The site will be static, probably using jekyll
-- Submissions of graphics will be github pull requests
-- Submission data will consist of an R source file, with metadata embedded in comments
-- Graphics will be generated travis when the code changes
+Submitting a graph
+----------
 
-Contributions of graphics to the gallery has always been difficult and hand crafted. With proper tools, we can leverage github and travis to build a much nicer R Graphics Gallery, facilitating contributions. 
+Share your graph and code!
 
-I'm currently rather in a blue sky mode about this project. So if you have ideas, please express them in an [issue](https://github.com/romainfrancois/rgraphicsgallery/issues) or fork this repo and make some pull request. 
+
+* Fork the site on GitHub
+* Create a new post in the `_posts` directory and fill out the relevant YAML fields
+* Make a 250x200 thumbnail and drop it in the thumbnails directory. List its filename in the post's markdown file. 
+* Test it out, then push your changes up and open a pull request. 
+
+License
+-------
+
+This code is altered from [http://jekyllthemes.org/]
+The contents of this repository are licensed under the [GNU Public License.](http://www.gnu.org/licenses/gpl-3.0.html)
