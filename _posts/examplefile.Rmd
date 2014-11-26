@@ -1,11 +1,6 @@
 ---
-layout: post
-title:  "Halloween-themed M&Ms"
-date:   2013-06-02 01:42:00
-homepage: http://nelsonauner.com
-download: http://nelsonauner.com/r/2014/10/30/Halloween-Magic-with-Functionals.html
-author: Nelson Auner
-thumbnail: Halloweenggplot.png
+title: "Halloween M&Ms"
+output: md_document
 ---
 
 
@@ -31,3 +26,11 @@ ggplot(mms,
   theme(legend.key = element_rect(colour = "black")) +
    theme(panel.background = element_rect(fill = "black"))
 ```
+
+
+volume = 100
+price = 100
+volume*price
+newvolume = 9.01
+newprice = 110
+newprice*newvolume
