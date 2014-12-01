@@ -29,7 +29,7 @@
 .input-block-level {
   display: block;
   width: 100%;
-  min-height: 30px;
+  min-height: 80px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -5559,9 +5559,9 @@ a.thumbnail:focus {
 }
 .thumbnail > img {
   display: block;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -7981,9 +7981,9 @@ code {
   background-color: #fff;
   position: relative;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
-  max-width: 280px;
+  min-width: 280px;
   height: 100%;
-  margin: 16px 8px;
+  margin: 5px 5px;
   display: inline-block;
   width: 20%;
   margin: 0 2% 30px 2%;
