@@ -1,4 +1,4 @@
-/*!
+	/*!
  * Bootstrap v2.3.2
  *
  * Copyright 2012 Twitter, Inc
@@ -7927,7 +7927,7 @@ code {
   border-bottom: 2px solid #000;
 }
 #logo {
-  font-family: 'Playball', cursive;
+  font-family: 'arial', cursive;
   font-weight: 400;
   color: #eee;
   line-height: 1.5;
@@ -7982,16 +7982,18 @@ code {
   position: relative;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
   min-width: 280px;
-  height: 100%;
-  margin: 5px 5px;
+  height: 250px;
+  margin: 2px 2px;
   display: inline-block;
   width: 20%;
-  margin: 0 2% 30px 2%;
+  margin: 0 2% 10px 2%;
 }
 .gallery div.item .item-inner {
   display: block;
   padding: 10px;
   margin-bottom: 10px;
+  //height: 500px;
+  //width: 500px;
 }
 .gallery div.item .item-inner:hover {
   opacity: 0.7;
@@ -8024,13 +8026,13 @@ code {
   width: 960px;
 }
 .post-content {
-  margin-top: 20px;
-  padding-top: 25px;
+  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px solid #ddd;
 }
 .postthumb {
   float: left;
-  margin: 0 15px 15px 0;
+  margin: 0 10px 10px 0;
   background-color: #fff;
   position: relative;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
