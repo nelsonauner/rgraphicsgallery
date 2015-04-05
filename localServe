@@ -1,4 +1,0 @@
-rm -r _site/
-jekyll serve
-cd _site
-python -m SimpleHTTPServer 8000 
