@@ -1,1 +1,0 @@
-Rscript R/master.R
