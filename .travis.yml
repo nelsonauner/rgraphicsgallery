@@ -1,5 +1,11 @@
 language: c
+before_install: 
+    - echo 'deb http://cran.rstudio.com/bin/linux/ubuntu precise/'  | sudo tee -a /etc/apt/sources.list
 install: 
-    - chmod +x makeGraphs.sh
-    - ./makeGraphs.sh
+   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+   - sudo apt-get update -y
+   - sudo apt-get install r-base -y 
+
+before_script: chmod +x makeGraphs.sh
+script: ./makeGraphs.sh
 
