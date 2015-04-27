@@ -63,6 +63,7 @@ close(fileConn)
 # should point to R/
 
 parseCodeFiles <- function() {
+  print("initiate parse Code files")
   setwd("C:/Users/n_auner/tech/rgraphicsgallery/R")
   baseDir <- getwd()
   # find names of scripts placed in YourCodeHere

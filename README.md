@@ -1,6 +1,8 @@
 rgraphicsgallery
 ================
 
+![Travis CI](https://travis-ci.org/nelsonauner/rgraphicsgallery.svg?branch=master)
+
 This is a complete redesign of the R Graphics Gallery. 
 
 - [x] The site will be static, probably using jekyll
