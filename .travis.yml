@@ -1,5 +1,5 @@
 language: c
-script: 
-    chmod +x makeGraphs.sh
-    ./makeGraphs.sh
+install: 
+    - chmod +x makeGraphs.sh
+    - ./makeGraphs.sh
 
