@@ -66,6 +66,7 @@ parseCodeFiles <- function() {
   print("initiate parse Code files")
   setwd("./R")
   baseDir <- getwd()
+  print(baseDir)
   # find names of scripts placed in YourCodeHere
   substrRight <- function(x, n=2){substr(x, nchar(x)-n+1, nchar(x))}
   scripts <- dir("./YourCodeHere/")
