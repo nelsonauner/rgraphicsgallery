@@ -1,3 +1,3 @@
 language: c
-script:./makeGraphs.sh
+script: ./makeGraphs.sh
 
