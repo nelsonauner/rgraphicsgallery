@@ -1,3 +1,4 @@
+#!/usr/bin/Rscript
 makeGraphic <- function(code,graph_width=400,graph_height=400,graph_res=45) {
   # input: code (right now, path to file) that produces a graph
   # output: none
@@ -42,14 +43,17 @@ publish_date <- getDate(codeText)
 setwd("..")
 # we literally have to produce the rgraph .markdown post here
 # starting working directory should be 
-  
-  fileConn<-file(paste0("../_posts/",publish_date,"-",code,".markdown") )#open file connection
+print("writing to:")
+(post_file <-   paste0("../_posts/",publish_date,"-",code,".markdown"))
+  fileConn<-file(post_file)#open file connection
 writeLines(c(
             "---",
             "layout: post",
             paste0("thumbnail: img/thumb/",code,".png"),
             "---",
-            codeText
+            "{% highlight R linenos %}",
+            codeText,
+            "{% endhighlight %}"
 ),fileConn)
 close(fileConn)
 }

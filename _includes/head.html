@@ -9,4 +9,57 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+<style>
+ul {         
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+}
+ul li {     
+    list-style:none;
+    margin-bottom:25px;           
+}
+ul li img {
+    cursor: pointer;
+}
+.modal-body {
+    padding:5px !important;
+}
+.modal-content {
+    border-radius:0;
+}
+.modal-dialog img {
+    text-align:center;
+    margin:0 auto;
+}
+.controls{          
+    width:50px;
+    display:block;
+    font-size:11px;
+    padding-top:8px;
+    font-weight:bold;          
+}
+.next {
+    float:right;
+    text-align:right;
+}
+/*override modal for demo only*/
+.modal-dialog {
+    max-width:500px;
+    padding-top: 90px;
+}
+@media screen and (min-width: 768px){
+    .modal-dialog {
+        width:500px;
+        padding-top: 90px;
+    }          
+}
+@media screen and (max-width:1500px){
+    #ads {
+        display:none;
+    }
+}
+  </style>
+
+
+  </style>
 </head>
