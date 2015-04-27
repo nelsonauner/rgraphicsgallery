@@ -1,4 +1,4 @@
-#!/usr/bin/Rscript
+#!/usr/bin/R
 makeGraphic <- function(code,graph_width=400,graph_height=400,graph_res=45) {
   # input: code (right now, path to file) that produces a graph
   # output: none
