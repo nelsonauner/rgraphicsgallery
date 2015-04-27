@@ -64,7 +64,7 @@ close(fileConn)
 
 parseCodeFiles <- function() {
   print("initiate parse Code files")
-  setwd("C:/Users/n_auner/tech/rgraphicsgallery/R")
+  setwd("./R")
   baseDir <- getwd()
   # find names of scripts placed in YourCodeHere
   substrRight <- function(x, n=2){substr(x, nchar(x)-n+1, nchar(x))}
