@@ -1,3 +1,2 @@
 language: r
-script: ./makeGraphs.sh
 
