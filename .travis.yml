@@ -12,6 +12,6 @@ before_script:
 
 script: 
     - makeGraphs.sh
-    - deployTravis.sh
+      #- deployTravis.sh not yet
 
 

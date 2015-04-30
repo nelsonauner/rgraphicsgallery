@@ -7,7 +7,7 @@ makeGraphic <- function(code,graph_width=400,graph_height=400,graph_res=45) {
   # effect: print a file to name.png
   setwd("R/YourCodeHere") 
   print(getwd())
-  picturefile=paste0("../../img/thumb/",code,".png")
+  picturefile=paste0(code,".png")
   png(picturefile)  
   #png(picturefile)#,width = graph_width,height=graph_height,res=graph_res)
   #consider using:
