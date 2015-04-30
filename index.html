@@ -2,14 +2,24 @@
 layout: default
 title: R Graphics Gallery
 ---
+
+<style>
+.image-responsive {
+    max-width:200px
+}
+</style>
 <div class="page-header">
-    <h1>R Graphics Gallery</h1>
-    <p class="lead">A searchable gallery of R graphs for inspiration</p>
+    <h1>R Graphics Gallery <small><iframe src="https://ghbtns.com/github-btn.html?user=nelsonauner&repo=rgraphicsgallery&type=fork&count=false&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>
+</small></h1>
+    <p class="lead">
+    A gallery of R graphs for inspiration.
+    Fork to add a grap!
+    </p>
 </div>
 
 <ul class="row">
     {% for post in site.posts %}
-    <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+    <!-- <li class="col&#45;lg&#45;2 col&#45;md&#45;2 col&#45;sm&#45;3 col&#45;xs&#45;4"> -->
     <a href="{{post.url}}">
         <img  class="image-responsive" src="{{ post.thumbnail }}">
     </a>
