@@ -10,5 +10,5 @@ before_script:
     - sudo rm -rf ./img/thumb
     - chmod +x makeGraphs.sh
 
-script: ./makeGraphs.sh
+script: sudo ./makeGraphs.sh
 

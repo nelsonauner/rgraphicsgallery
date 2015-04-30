@@ -1,21 +1,23 @@
 #!/usr/bin/R
 makeGraphic <- function(code,graph_width=400,graph_height=400,graph_res=45) {
-  # input: code (right now, path to file) that produces a graph
+  # input: "code.R" that produces a graph
   # output: none
+  # required state: pwd == root
+  # final state: pwd == root
   # effect: print a file to name.png
-  png(file=paste0("../img/thumb/",code,".png"),width = graph_width,height=graph_height,res=graph_res)
+  setwd("R/YourCodeHere") 
+  print(getwd())
+  picturefile=paste0("../../img/thumb/",code,".png")
+  png(picturefile)  
+  #png(picturefile)#,width = graph_width,height=graph_height,res=graph_res)
   #consider using:
   par(mar=c(5,3,2,2)+0.1)
-  setwd("./YourCodeHere/") #you have to do this so that the scripts can access local assets... 
   source(code)
   #TODO: we'll use this later: 
   #scriptContents <- readChar(currentScript, file.info(currentScript)$size)
   #print(scriptContents)
-  setwd("..")
   dev.off()
-  #file.copy(from=currentScript,to=paste0("./processedCode/",scripts[i]))
-  #file.remove(currentScript)
-  #no need to remove
+  setwd("../..") #back to pwd == root
 }
 
 getDate <- function(codeText) {
@@ -34,17 +36,18 @@ getDate <- function(codeText) {
 }
 
 makePost <- function(code) {
-# input: code (right now, path to file) that produces a graph
+# input: "code.R" in R/YourCodeHere that produces a graph
+# required state: pwd == root
 # output: none
 # effect: print a file to name.png
-  setwd("./YourCodeHere/")
+
+setwd("R/YourCodeHere/")
 codeText <- readLines(code, file.info(code)$size)
 publish_date <- getDate(codeText)
-setwd("..")
 # we literally have to produce the rgraph .markdown post here
 # starting working directory should be 
-print("writing to:")
-(post_file <-   paste0("../_posts/",publish_date,"-",code,".markdown"))
+setwd("../..")
+(post_file <-   paste0("_posts/",publish_date,"-",code,".markdown"))
   fileConn<-file(post_file)#open file connection
 writeLines(c(
             "---",
@@ -63,13 +66,11 @@ close(fileConn)
 # should point to R/
 
 parseCodeFiles <- function() {
-  print("initiate parse Code files")
-  setwd("./R")
-  baseDir <- getwd()
-  print(baseDir)
+  # required state: pwd == root
+  # final state: pwd == root
   # find names of scripts placed in YourCodeHere
   substrRight <- function(x, n=2){substr(x, nchar(x)-n+1, nchar(x))}
-  scripts <- dir("./YourCodeHere/")
+  scripts <- dir("R/YourCodeHere/")
   print(scripts)
   # scripts should be executed under the following conditions:
   #     - must end in ".R"
@@ -87,11 +88,10 @@ parseCodeFiles <- function() {
   print(scripts)
   # iterate over all valid scripts and produce graphics
   for (i in 1:length(scripts)) {
-    currentScript <- paste0("./YourCodeHere/",scripts[i])
-    print("processing")
     makeGraphic(scripts[i])
     makePost(scripts[i])
   }
 }
 
 parseCodeFiles()
+
