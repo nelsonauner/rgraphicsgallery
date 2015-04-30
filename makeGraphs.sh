@@ -1,1 +1,1 @@
-Rscript ./R/master.R
+Rscript R/master.R
