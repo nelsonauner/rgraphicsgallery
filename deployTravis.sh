@@ -1,6 +1,5 @@
 echo ${GH_TOKEN}
 echo ${GH_REF}
-
 git checkout gh-pages
 git config user.name "Travis-CI"
 git config user.email "travis@nelsonauner.com"
