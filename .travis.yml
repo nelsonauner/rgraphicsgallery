@@ -11,7 +11,7 @@ before_script:
     - chmod +x makeGraphs.sh
 
 script: 
-    - makeGraphs.sh
-      #- deployTravis.sh not yet
+    - ./makeGraphs.sh
+      #- ./deployTravis.sh not yet
 
 
