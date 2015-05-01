@@ -47,7 +47,7 @@ publish_date <- getDate(codeText)
 # we literally have to produce the rgraph .markdown post here
 # starting working directory should be 
 setwd("../..")
-(post_file <-   paste0("../../_posts/",publish_date,"-",code,".markdown"))
+(post_file <-   paste0(publish_date,"-",code,".markdown"))
   fileConn<-file(post_file)#open file connection
 writeLines(c(
             "---",
