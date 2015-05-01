@@ -3,7 +3,7 @@ title: R Graphics Gallery
 email: nelson@nelsonauner.com
 description: > # this means to ignore newlines until "baseurl:"
     A searchable gallery of R graphs for inspiration
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "nelsonauner.github.io/rgraphicsgallery" # the subpath of your site, e.g. /blog/
 
 # Build settings
 markdown: kramdown
