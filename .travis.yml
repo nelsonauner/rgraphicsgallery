@@ -1,5 +1,5 @@
 language: c
-before_install: 
+before_install:  
     - echo 'deb http://cran.rstudio.com/bin/linux/ubuntu precise/'  | sudo tee -a /etc/apt/sources.list
 install: 
    - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
@@ -7,7 +7,7 @@ install:
    - sudo apt-get install r-base -y 
 
 before_script:
-    - sudo rm -rf ./img/thumb
+    - sudo rm -rf ./img/thumb/*  
     - chmod +x makeGraphs.sh
     - chmod +x deployTravis.sh
 
