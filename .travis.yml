@@ -9,6 +9,7 @@ install:
 before_script:
     - sudo rm  ./img/thumb/*  
     - sudo rm  _posts/*
+    - ls
     - chmod +x makeGraphs.sh
     - chmod +x deployTravis.sh
 
