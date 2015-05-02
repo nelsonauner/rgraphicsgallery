@@ -7,13 +7,15 @@ install:
    - sudo apt-get install r-base -y 
 
 before_script:
-    - sudo rm -rf ./img/thumb/*  
-    - sudo rm -rf _posts/*
+    - sudo rm  ./img/thumb/*  
+    - sudo rm  _posts/*
+    - ls
     - chmod +x makeGraphs.sh
     - chmod +x deployTravis.sh
 
 script: 
     - ./makeGraphs.sh
+after_success:
     - ./deployTravis.sh
 
 
