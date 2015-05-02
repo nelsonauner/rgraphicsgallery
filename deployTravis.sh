@@ -9,5 +9,5 @@ git reset upstream/gh-pages
 echo ${GH_TOKEN}
 echo ${GH_REF}
 git add -A .
-git commit -m "rebuild pages at ${rev}"
+git commit -m "travis deploy to gh-pages ${rev}"
 git push -q upstream HEAD:gh-pages
