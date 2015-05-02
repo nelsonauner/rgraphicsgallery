@@ -4,3 +4,5 @@
 *.swp
 *.swo
 *.swn
+R/.RData
+R/.Rhistory
